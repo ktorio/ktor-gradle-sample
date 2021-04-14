@@ -7,7 +7,7 @@ group 'org.example'
 version '1.0-SNAPSHOT'
 
 application {
-    mainClass = 'com.example.ApplicationKt'
+    mainClass = 'io.ktor.server.netty.EngineMain'
 }
 
 repositories {
