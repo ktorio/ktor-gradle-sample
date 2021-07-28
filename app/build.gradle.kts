@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile as KotlinCompile
+
 val ktorVersion:String by project
 
 plugins {
@@ -7,6 +9,11 @@ plugins {
 
 group = "org.example"
 version = "1.0"
+
+
+application{
+    mainClassName = "com.example.ApplicationKt"
+}
 
 repositories {
     mavenCentral()
@@ -25,3 +32,15 @@ dependencies {
     testImplementation(kotlin("test"))
 
 }
+
+
+tasks.withType(KotlinCompile::class.java)
+    .all {
+        kotlinOptions {
+            jvmTarget = "11"
+        }
+
+
+
+
+    }
