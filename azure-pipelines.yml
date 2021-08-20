@@ -8,7 +8,7 @@ trigger:
 
 pool:
   vmImage: ubuntu-latest
-container: jetbrains/qodana
+container: jetbrains/qodana:latest
 steps:
 - script: /opt/bin/idea/entrypoint
   displayName: 'Run a one-line script'
