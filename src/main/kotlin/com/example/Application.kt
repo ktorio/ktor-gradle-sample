@@ -8,6 +8,7 @@ import io.ktor.server.netty.*
 
 fun main() {
     embeddedServer(Netty, port = 8000) {
+        install(ForwardedHeaderSupport)// It will avoid showing unsecure pages once deployed to Heroku
         routing {
             get("/") {
                 call.respondText("Hello, world!")
